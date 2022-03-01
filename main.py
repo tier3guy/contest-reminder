@@ -2,6 +2,8 @@
 from pushbullet import PushBullet
 from bs4 import BeautifulSoup
 import requests
+import time
+
 
 def __main__():
   codechef_link = "https://www.codechef.com/"
@@ -29,6 +31,8 @@ def __main__():
   pb = PushBullet(pushBullet_access_token)
   push = pb.push_note("Contest Reminder", msg)
 
-  
 
-__main__()
+while True:
+  __main__()
+  time_wait = 24 * 60
+  time.sleep(time_wait * 60)
