@@ -34,4 +34,5 @@ def __main__():
 
 while True:
   __main__()
-  time.sleep(10)
+  time_wait = 24 * 60
+  time.sleep(time_wait * 60)
