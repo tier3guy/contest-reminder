@@ -1,17 +1,11 @@
 from pushbullet import PushBullet
-from dotenv import load_dotenv
-import os
 from bs4 import BeautifulSoup
 import requests
 import time
 
-load_dotenv()
-
-pushBullet_access_token = os.getenv('pushBullet_access_token')
-
 def __main__():
   codechef_link = "https://www.codechef.com/"
-  
+  pushBullet_access_token = "o.96jyHv9X9XHS8pi1YgMW8pWBNyrb6B0V"
 
   html_content = requests.get(codechef_link).text
   soup = BeautifulSoup(html_content, 'lxml')
